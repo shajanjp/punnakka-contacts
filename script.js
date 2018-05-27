@@ -12,6 +12,13 @@ const db = firebase.firestore();
 const settings = {timestampsInSnapshots: true};
 db.settings(settings);
 
+function prettyAlert(title, type){  
+new Noty({
+  type: type,
+  text: title,
+  timeout: 2500
+}).show();
+}
 function getFormData($form){
   var unindexed_array = $form.serializeArray();
   var indexed_array = {};
@@ -27,6 +34,8 @@ $('#new-contact-submit').on('click', (e) => {
   db.collection("contacts").add(getFormData($('#new-contact')))
   .then(function(docRef) {
     console.log("Document written with ID: ", docRef.id);
+    document.getElementById("new-contact").reset(); 
+    prettyAlert('Contact added succesfully', 'success');
   })
   .catch(function(error) {
     console.error("Error adding document: ", error);
@@ -48,9 +57,9 @@ var contactsRef = db.collection("contacts");
 
 contactsRef.get().then(function(querySnapshot) {
   querySnapshot.forEach(function(doc) {
-    console.log(doc.data().fillName);
     $("#contacts-list").append(makeContactRow(doc.data()));
   });
 }).catch(function(error) {
   console.log("Error getting document:", error);
 });
+
