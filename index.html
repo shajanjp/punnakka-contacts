@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Punnakka Contacts</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
+</head>
+<body>
+  <br>
+  <div class="ui container">
+    <div class="ui grid">
+
+      <!-- Contact add form -->
+      <div class="four wide column">
+        <form class="ui form" id="new-contact">
+          <div class="field">
+            <label for="fullName">Full Name</label>
+            <input type="text" name="fullName" placeholder="Johan Sony">
+          </div>
+          <div class="field">
+            <label for="fullName">Nick Name</label>
+            <input type="text" name="nickName" placeholder="Johan Sony">
+          </div>
+          <div class="field">
+            <label for="fullName">Gender</label>
+            <select class="ui select-gender dropdown" name="gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="fullName">Phone</label>
+            <input type="text" name="phone" placeholder="Johan Sony">
+          </div>
+          <div class="field">
+            <label for="fullName">Email</label>
+            <input type="text" name="email" placeholder="Johan Sony">
+          </div>
+          <div class="field">
+            <label for="fullName">RIP</label>
+            <input type="checkbox" name="rip">
+          </div>
+          <div class="ui small green button" id="new-contact-submit">Save</div>
+        </form>
+      </div>
+      
+      <div class="twelve wide column">      
+        <table class="ui table">
+          <thead>
+            <tr>
+              <th>Full Name</th>
+              <th>Nick Name</th>
+              <th>Gender</th>
+              <th>Phone</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody id="contacts-list">
+          </tbody>
+        </table>
+      </div>
+    
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+  <script>
+    $('.ui.select-gender').dropdown();
+  </script>
+  <script src="./script.js"></script>
+</body>
+</html>
