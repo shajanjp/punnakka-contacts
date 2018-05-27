@@ -14,40 +14,43 @@
 
       <!-- Contact add form -->
       <div class="four wide column">
-        <form class="ui form" id="new-contact">
-          <div class="field">
-            <label for="fullName">Full Name</label>
-            <input type="text" name="fullName" placeholder="Johan Sony">
-          </div>
-          <div class="field">
-            <label for="fullName">Nick Name</label>
-            <input type="text" name="nickName" placeholder="Jithu">
-          </div>
-          <div class="field">
-            <label for="fullName">Gender</label>
-            <select class="ui select-gender dropdown" name="gender">
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="fullName">Phone</label>
-            <input type="text" name="phone" placeholder="9876543210">
-          </div>
-          <div class="field">
-            <label for="fullName">Email</label>
-            <input type="text" name="email" placeholder="johansony@gmail.com">
-          </div>
-          <div class="field">
-            <label for="fullName">Date Of Birth</label>
-            <input type="text" name="dob" placeholder="1993-08-24">
-          </div>
-          <div class="ui small green button" id="new-contact-submit">Save</div>
-        </form>
+        <div class="ui segment">
+        <h2 class="ui header">Add New Contact</h2>
+          <form class="ui form" id="new-contact">
+            <div class="field">
+              <label for="fullName">Full Name</label>
+              <input type="text" name="fullName" placeholder="Johan Sony">
+            </div>
+            <div class="field">
+              <label for="fullName">Nick Name</label>
+              <input type="text" name="nickName" placeholder="Jithu">
+            </div>
+            <div class="field">
+              <label for="fullName">Gender</label>
+              <select class="ui select-gender dropdown" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="fullName">Phone</label>
+              <input type="text" name="phone" placeholder="9876543210">
+            </div>
+            <div class="field">
+              <label for="fullName">Email</label>
+              <input type="text" name="email" placeholder="johansony@gmail.com">
+            </div>
+            <div class="field">
+              <label for="fullName">Date Of Birth</label>
+              <input type="text" name="dob" placeholder="1993-08-24">
+            </div>
+            <div class="ui small green button" id="new-contact-submit">Save</div>
+          </form>
+        </div>
       </div>
       
       <div class="twelve wide column">
-        
+        <h2 class="ui header">All contacts</h2>
         <table class="ui table">
           <thead>
             <tr>
